@@ -205,6 +205,91 @@ void multiset(){
 
 void unorderedset(){
 	//stores all unique elements but not in sorted fashion
+	unordered_set<int> st;
+//	lower bond upper bond does not work rest all are same
+
+}
+
+void map(){
+//	{key,value}
+	map<int,int> mp;
+	map<int ,pair<int,int>>map;
+	map<pair<int,int>,int>mpp;
+	
+	map[1]=2;  //1st way to write
+	//or
+	mpp.emplace({3,1});
+	mpp.insert({2,4});
+//	{
+//		{1,2}
+//		{2,4}
+//		{3,1}
+//	}
+	map[{2,3}]=10;
+	
+	for(auto it: mpp){
+		cout<<it.first<<" "<<it.second<<endl;
+	}
+	cout<<mpp[1]; //prints 2
+	cout<<mpp[5]; //prints 0 as it does not exist
+	
+	auto it=mpp.find(3);//points to the position where 3 is found
+	cout<<*(it).second; 
+	
+	auto it=mpp.find(5); //points to the end of the map since 5 not there
+	
+	
+	
+	
+}
+
+void multimap(){
+	//map doesnt store same key value pair twice
+//	this can do
+	  
+}
+
+
+//extra stl stuff
+void extra(){
+
+sort(a,a+n);
+ //sorting
+sort(a+2,a+4); //{first,last} where last is not incuded
+
+sort(a,a+n,greater<int>);//sorts in decreasing order
+
+pair<int,int>a[]={{1,2},{2,1},{4,1}}; //sort it according to the second element
+//if second element is same,then sort it according to the first
+
+sort(a,a+n,comp); //to be continued 
+//define the comparator
+
+
+int num=7; //111 count=3 no. of set bits
+int cnt=__builtin_popcount(); //only works with integers
+
+long long num=183848493784;
+int cnt=__builtin_popcountll();  //for long long
+
+//next permutation also works with arrays
+string s="123";
+do{
+	cout<<s<<endl;
+}while(next_permutation(s.begin(),s.end()));
+//dictionary order
+//123
+//132
+//213
+//231
+//312
+//321
+
+
+ //find max element in a given range
+int maxi= *max_element(a,a+n); 
+} 
+
 }
 	int main(){
 		explainvector();
